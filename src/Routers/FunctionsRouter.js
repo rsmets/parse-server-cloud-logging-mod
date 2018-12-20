@@ -130,7 +130,7 @@ export class FunctionsRouter extends PromiseRouter {
         var response = FunctionsRouter.createResponseObject((result) => {
           try {
             const cleanResult = logger.truncateLogMessage(JSON.stringify(result.response.result));
-            logger.info(
+            logger.debug(
               `Ran cloud function ${functionName} for user ${userString} with:\n  Input: ${cleanInput }\n  Result: ${cleanResult }`,
               {
                 functionName,

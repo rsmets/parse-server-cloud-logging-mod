@@ -1,13 +1,6 @@
 ![Parse Server logo](.github/parse-server-logo.png?raw=true)
 
-[![Backers on Open Collective](https://opencollective.com/parse-server/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/parse-server/sponsors/badge.svg)](#sponsors)
-[![Build Status](https://img.shields.io/travis/parse-community/parse-server/master.svg?style=flat)](https://travis-ci.org/parse-community/parse-server)
-[![Coverage Status](https://img.shields.io/codecov/c/github/parse-community/parse-server/master.svg)](https://codecov.io/github/parse-community/parse-server?branch=master)
-[![npm version](https://img.shields.io/npm/v/parse-server.svg?style=flat)](https://www.npmjs.com/package/parse-server)
-[![Join Chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/ParsePlatform/Chat)
-[![Greenkeeper badge](https://badges.greenkeeper.io/parse-community/parse-server.svg)](https://greenkeeper.io/)
-
-Parse Server is an [open source version of the Parse backend](http://blog.parseplatform.org/announcements/introducing-parse-server-and-the-database-migration-tool/) that can be deployed to any infrastructure that can run Node.js.
+Parse Server is an [open source version of the Parse backend](http://blog.parseplatform.org/announcements/introducing-parse-server-and-the-database-migration-tool/) that can be deployed to any infrastructure that can run Node.js. This NPM module is the a fork of Parse Server 2.7.4 version with the only modifications being around cloud code logging. Want to log cloud function execution at the debug level versus info. I also added a logging transport to handle the info level and up by default so one can set the Parse Server log level at debug upon init to still capture the cloud code execution logs in a separate file. Now by default as an Info, Debug, and Error level logging transport. 
 
 Parse Server works with the Express web application framework. It can be added to existing web applications, or run by itself.
 
