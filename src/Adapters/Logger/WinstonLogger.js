@@ -29,7 +29,8 @@ function updateTransports(options) {
           name: 'parse-server-error',
         }, options, { level: 'error', timestamp: true  }));
 
-      transports['parse-server-debug'] = new _winstonDailyRotateFile2.default(Object.assign({}, {
+        transports['parse-server-debug'] = new (DailyRotateFile)(
+        Object.assign({}, {
           filename: 'parse-server.debug',
           name: 'parse-server-debug'
         }, options, { level: 'debug', timestamp: true }));
