@@ -270,7 +270,7 @@ class ParseLiveQueryServer {
     });
 
     parseWebsocket.on('disconnect', () => {
-      logger.info(`Client disconnect: ${parseWebsocket.clientId}`);
+      logger.debug(`Client disconnect: ${parseWebsocket.clientId}`);
       const clientId = parseWebsocket.clientId;
       if (!this.clients.has(clientId)) {
         runLiveQueryEventHandlers({
@@ -426,7 +426,7 @@ class ParseLiveQueryServer {
     const client = new Client(clientId, parseWebsocket, hasMasterKey);
     parseWebsocket.clientId = clientId;
     this.clients.set(parseWebsocket.clientId, client);
-    logger.info(`Create new client: ${parseWebsocket.clientId}`);
+    logger.debug(`Create new client: ${parseWebsocket.clientId}`);
     client.pushConnect();
     runLiveQueryEventHandlers({
       event: 'connect',
