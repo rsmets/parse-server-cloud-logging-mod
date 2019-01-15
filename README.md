@@ -1,5 +1,9 @@
 ![Parse Server logo](.github/parse-server-logo.png?raw=true)
 
+This repo is the a fork of Parse Server 2.7.4 version with modifications around cloud code logging. Changed some logging levels to default to make an app I have on top of it have more meaningful info level logs. I also added an additinoal logging transport to have a file for debug, info, error by default out of the box. Figure might as well while I was back here.
+
+This custom NPM module can be found here: https://www.npmjs.com/package/parse-server-cloud-logging-mod
+
 Parse Server is an [open source version of the Parse backend](http://blog.parseplatform.org/announcements/introducing-parse-server-and-the-database-migration-tool/) that can be deployed to any infrastructure that can run Node.js. This NPM module is the a fork of Parse Server 2.7.4 version with the only modifications being around cloud code logging. Want to log cloud function execution at the debug level versus info. I also added a logging transport to handle the info level and up by default so one can set the Parse Server log level at debug upon init to still capture the cloud code execution logs in a separate file. Now by default as an Info, Debug, and Error level logging transport. 
 
 Parse Server works with the Express web application framework. It can be added to existing web applications, or run by itself.
